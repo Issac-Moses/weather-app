@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: white;
+    background: #000;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.weather-box {
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    margin-bottom: 100px;
+}
+
+.weather-info h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.weather-info p {
+    margin: 8px 0;
+}
+
+.temperature {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.conditions {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.weather-detail-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.sun-times {
+    margin: 15px 0;
+    font-size: 0.9rem;
+}
+
+.loading-spinner {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Input Container Styles */
+.prompt-container {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 20px;
+    padding: 16px 0;
+    background: transparent;
+}
+
+.prompt-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 600px;
+}
+
+.prompt-form {
+    display: flex;
+    gap: 12px;
+    height: 56px;
+    align-items: center;
+    width: 100%;
+    border-radius: 130px;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.prompt-form:focus-within {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.prompt-input {
+    width: 100%;
+    height: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    padding-left: 24px;
+}
+
+.prompt-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.prompt-actions {
+    display: flex;
+    gap: 5px;
+    margin-right: 7px;
+}
+
+.prompt-actions button {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    border: none;
+    color: white;
+    background: rgba(192, 9, 9, 0.8);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prompt-actions button:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #c00909;
+    transform: scale(1.05);
+}
+
+/* Copyright Footer */
+.copyright {
+    position: fixed;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    padding: 5px 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .weather-box {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .prompt-form {
+        height: 53px;
+    }
+    
+    .prompt-actions button {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .prompt-input {
+        padding-left: 20px;
+    }
+    
+    .copyright {
+        bottom: 70px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .weather-box {
+        padding: 15px;
+    }
+    
+    .copyright {
+        bottom: 65px;
+        font-size: 10px;
+        max-width: 250px;
+    }
+}
