@@ -49,4 +49,4 @@ Enter a city name and click Get Weather.
 - Contributions are welcome! Feel free to fork this project and submit a pull request.
 
 ## 📝 License
-- This project is licensed under the MIT License. See LICENSE for details.
+- This project is licensed under the MIT License. See [MIT License](LICENSE) for details.
