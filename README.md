@@ -1,10 +1,10 @@
 # 🌦️ Weather App
 This is a simple **Weather App** that allows users to check the weather conditions of any city. It dynamically updates the background video based on the weather conditions.
 
-## **Live Demo**
+## 😎 **Live Demo**
 [Visit Live Demo](https://issac-moses-weather-app.netlify.app)
 
-## **Screen Shot of Output**
+## 😛 **Screen Shot of Output**
 ![Weather App Demo ScreenShot](/demo/default.jpg)
 ![Weather App Rainy Weather](/demo/rainy.jpg)
 ![Weather App Cloudy Weather](/demo/cloudy.jpg)
