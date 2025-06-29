@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@32,400,0,0" />
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Temporary loading style */
+        
         .initial-load {
             position: fixed;
             top: 0;
@@ -25,23 +25,23 @@
     </style>
 </head>
 <body>
-    <!-- Initial Loading -->
+   
     <div class="initial-load" id="initial-load">
         Loading Weather App...
     </div>
 
-    <!-- Background Video -->
+   
     <video id="bg-video" autoplay muted loop playsinline preload="auto">
         <source id="video-source" src="videos/default.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
-    <!-- Weather Box -->
+    
     <div class="weather-box" id="weather-box" style="display: none;">
         <div class="weather-info" id="weather-info"></div>
     </div>
 
-    <!-- Input Container -->
+    
     <div class="prompt-container">
         <div class="prompt-wrapper">
             <form class="prompt-form" id="weather-form">
@@ -58,12 +58,12 @@
         </div>
     </div>
 
-    <!-- Copyright Footer -->
+    
     <p class="copyright">© 2025 Weather App | Created by ISSAC MOSES</p>
 
     <script src="script.js"></script>
     <script>
-        // Remove initial loader after everything loads
+        
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.getElementById('initial-load').style.display = 'none';
