@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // DOM Elements
+
     const weatherForm = document.getElementById('weather-form');
     const cityInput = document.getElementById('city-input');
     const weatherInfo = document.getElementById('weather-info');
@@ -7,13 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const bgVideo = document.getElementById('bg-video');
     const weatherBox = document.getElementById('weather-box');
 
-    // API Key
+
     const API_KEY = '5b74e87158f9cad9592fdfeac5683b9f';
 
-    // Hide weather box initially
     weatherBox.style.display = 'none';
 
-    // Initialize default video
+
     function initVideo() {
         videoSource.src = "videos/default.mp4";
         bgVideo.load();
@@ -23,10 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Initialize app
+  
     initVideo();
 
-    // Event Listeners
+    
     weatherForm.addEventListener('submit', function(e) {
         e.preventDefault();
         const city = cityInput.value.trim();
@@ -35,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Weather Function
+    
     async function getWeather(city) {
         try {
             weatherBox.style.display = 'block';
